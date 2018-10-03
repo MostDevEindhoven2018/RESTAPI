@@ -28,7 +28,9 @@ namespace RESTAPI
                 options.AddPolicy("AllowAllOrigins",
                     builder =>
                     {
-                    builder.AllowAnyOrigin();
+                        builder.AllowAnyOrigin();
+                        builder.AllowAnyHeader();
+                        builder.AllowAnyMethod();
                     });
              }
             );
